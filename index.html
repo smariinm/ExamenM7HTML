@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Board</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="board">
+      <div class="PENDING">
+        <h2>Pendientes</h2>
+        <div class="task" onclick="moveTask(this)">
+          Tarea 1
+          <button class="deleteButton" onclick="removeTask(event)">×</button>
+        </div>
+        <div class="task" onclick="moveTask(this)">
+          Tarea 2
+          <button class="deleteButton" onclick="removeTask(event)">×</button>
+        </div>
+        <div class="task" onclick="moveTask(this)">
+          Tarea 3
+          <button class="deleteButton" onclick="removeTask(event)">×</button>
+        </div>
+      </div>
+
+      <div class="COMPLETED">
+        <h2>Completadas</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="task-form">
+    <h3>Add New Task</h3>
+    <input type="text" id="newTaskInput" placeholder="Enter new task">
+    <button onclick="addTask()">Añadir</button>
+  </div>
+
+  <div class="info-box">
+    <h3 onclick="toggleInfo()">¿Cómo funciona?</h3>
+    <div id="infoContent" class="info-content">
+      <p>Esta página es un organizador de tareas, donde puedes poner las tareas que tienes que hacer y las que ya has hecho.
+        Como adición, a parte de que cuando le das a una tarea se pone en completada, he hecho al ingenieria inversa, 
+        es decir, cuando le das a una tarea completada, te la mueve de nuevo a pendiente por si ha habido algún fallo. 
+        También he visto coherente el poder quitar tareas muy atrasadas o ya hechas, entonces existe la opción de eliminarlas.
+         Puedes añadir tareas y el cajón que estas leyendo es plegable para molestar lo menos posible.
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
